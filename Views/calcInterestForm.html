@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form id="calc-form" action="" method="post" onreset="resetHandler()">
+        <h3>Calculate your interest!</h3>
+        <fieldset>
+          <input
+            id="amount"
+            placeholder="Amount"
+            type="number"
+            tabindex="1"
+            required
+            autofocus
+          />
+        </fieldset>
+        <fieldset>
+          <input
+            id="interestRate"
+            placeholder="Interest Rate"
+            type="number"
+            tabindex="2"
+            required
+          />
+        </fieldset>
+        <fieldset>
+          <input
+            id="nbOfYears"
+            placeholder="Number of years"
+            type="number"
+            tabindex="3"
+            required
+          />
+        </fieldset>
+        <fieldset>
+          <button
+            name="calculate"
+            type="button"
+            id="cacl-submit"
+            data-submit="...Sending"
+            onclick="calcInterest()"
+          >
+            Calculate
+          </button>
+          <button type="reset">Reset</button>
+        </fieldset>
+        <p class="result" id="output"></p>
+      </form>
+    </div>
+    <script src="apiCall.js"></script>
+  </body>
+</html>
